@@ -40,7 +40,7 @@ const questions = [{
 }, {
     type: "list",
     message: "What license was used?",
-    choices: ["MIT", "GNU v3", "BSD 3", "Apache 2.0"],
+    choices: ["MIT", "GNU GPL v3", "BSD 3", "Apache 2.0", "NA"],
     name: "license"
 }
 ];
