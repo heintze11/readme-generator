@@ -8,54 +8,61 @@ const generateMarkdown = require("./utils/generateMarkdown.js")
 const questions = [{
     type: "input",
     message: "What is the project title?",
-    name: "Title"
+    name: "title"
 }, {
     type: "input",
     message: "What is the description of the project?",
-    name: "Description"
+    name: "description"
 }, {
     type: "input",
     message: "Installation",
-    name: "Installation"
+    name: "installation"
 }, {
     type: "input",
     message: "Usage",
-    name: "Usage"
-}, { 
+    name: "usage"
+}, {
     type: "input",
     message: "Contribution Guidlines",
-    name: "Contribution"
- }, {
+    name: "contribution"
+}, {
     type: "input",
     message: "Test Instructions",
-    name: "Instructions"
-  },{
+    name: "instructions"
+}, {
     type: "input",
     message: "What is your github username?",
-    name: "Github"
-   }, {
-    type: "input"
+    name: "github"
+}, {
+    type: "input",
     message: "What is your email?",
     name: "email"
-    }, {
-    type: "list"
-    message: "What license was used?"
-    choices: ["MIT", "GPL", "BSD"]
-    }
+}, {
+    type: "list",
+    message: "What license was used?",
+    choices: ["MIT", "GNU v3", "BSD 3", "Apache 2.0"],
+    name: "license"
+}
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    
+    fs.writeFile(fileName, data, function(err){
+        if (err) {
+            return console.log(err)
+        } else {
+            console.log("Success")
+        }
+    })
 }
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
-    .then(function(info) {
-        writeToFile("ReadmeTest.md", generateMarkdown(info));
-
-    }) 
+        .then(function (data) {
+            writeToFile(`${data.title}.md`, generateMarkdown(data));
+            console.log(data);
+        })
 }
 
 // Function call to initialize app
