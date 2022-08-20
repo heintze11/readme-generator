@@ -1,4 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if(license === "Apache 2.0"){
@@ -14,7 +14,7 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
+// Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if(license === "Apache 2.0"){
@@ -30,7 +30,7 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
+// Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if(license === "Apache 2.0"){
@@ -46,7 +46,7 @@ function renderLicenseSection(license) {
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
   ![License Badge](${renderLicenseBadge(data.license)})
@@ -55,20 +55,28 @@ function generateMarkdown(data) {
   - [Installation](#installation)
   - [Usage](#usage)
   - [Contribution](#contribution)
+  - [Test Instructions](#tests)
   - [Contact](#contact)
   - [license](#license)
   ## Description
-  ### ${data.description}
+  ${data.description}
   ## Installation
-  ### ${data.installation}
+  ${data.installation}
   ## Usage
-  ### ${data.usage}
+  ${data.usage}
   ## Contribution
-  ### ${data.contribution}
+  List of other contributors:  
+  ${data.contribution}
+  ## Tests
+  Here are examples to use for testing purposes:  
+  ${data.instructions}
   ## Contact
-  ### ${data.email}
+  Creator Github link  
+  [${data.github}](https://github.com/${data.github})  
+  Creator Contact  
+  [Email](mailto:${data.email})
   ## license
-  ### ${renderLicenseSection(data.license)}
+  ${renderLicenseSection(data.license)}
 `;
 }
 
