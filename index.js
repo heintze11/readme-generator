@@ -23,11 +23,11 @@ const questions = [{
     name: "usage"
 }, {
     type: "input",
-    message: "Did anyone else contribute to the project?",
+    message: "Can other people contribute to the project?",
     name: "contribution"
 }, {
     type: "input",
-    message: "Please include tests for the application.",
+    message: "Please include an example test for the application.",
     name: "instructions"
 }, {
     type: "input",
@@ -61,7 +61,6 @@ function init() {
     inquirer.prompt(questions)
         .then(function (data) {
             writeToFile(`${data.title}.md`, generateMarkdown(data));
-            console.log(data);
         })
 }
 

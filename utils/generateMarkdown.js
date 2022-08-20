@@ -65,10 +65,10 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
   ## Contribution
-  List of other contributors:  
+  Can other people contribute to this project?    
   ${data.contribution}
   ## Tests
-  Here are examples to use for testing purposes:  
+  Here is an example to use for testing purposes:  
   ${data.instructions}
   ## Contact
   Creator Github link  
