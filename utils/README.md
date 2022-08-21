@@ -1,4 +1,4 @@
-# README Generator
+# README-Generator
   ![License Badge](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
   ## Table of Contents:
   - [Description](#description)
@@ -11,7 +11,7 @@
   ## Description
   This app generates a README file based on user input through the terminal. It creates a clean and easy to read professional file for use with any project.
   ## Installation
-  Inquirer and fs
+  inquirer and fs
   ## Usage
   Through the terminal using node index.js
   ## Contribution
@@ -20,7 +20,6 @@
   ## Tests
   Here is an example to use for testing purposes:  
   Open terminal – Run “node index.js” – Answer questions – App should create a new README file with provided answers.
-  [Example Video](https://watch.screencastify.com/v/DLEbTnYtZDqdqnBBccR9)
   ## Contact
   Use the links below to contact the creator with questions.  
   [Github](https://github.com/heintze11)  
