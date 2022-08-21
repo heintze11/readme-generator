@@ -71,11 +71,10 @@ function generateMarkdown(data) {
   Here is an example to use for testing purposes:  
   ${data.instructions}
   ## Contact
-  Creator Github link  
-  [${data.github}](https://github.com/${data.github})  
-  Creator Contact  
+  Use the links below to contact the creator with questions.  
+  [Github](https://github.com/${data.github})  
   [Email](mailto:${data.email})
-  ## license
+  ## License
   ${renderLicenseSection(data.license)}
 `;
 }
